@@ -1,0 +1,9 @@
+剩余函数：
+  不知道要向函数中传入多少参数，这种情况下可以用剩余函数进行定义
+  剩余函数的语法：我们可以把不确定的参数用数组的形式传进去
+  function example (firstName: string, ...restName: string[]) {
+    return firstName + restName.join(" ")
+  }
+Lambda函数也叫箭头函数：
+函数重载：
+  重载是方法名字相同，而参数不同，返回类型可以相同，也可以不同。

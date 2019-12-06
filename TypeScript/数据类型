@@ -1,0 +1,23 @@
+任意类型：any--声明为any的变量可以赋予任何类型的值
+数字类型：number--双精度64位浮点值，可以用来表示整数和分数
+字符串类型：string--一个字符系列，使用单引号或者双引号表示字符串类型，反引号用来定义多行文本
+  或者内嵌表达式。
+布尔类型：boolean--表示逻辑值true或false
+数组类型：声明变量为数组
+  1.在元素类型后面加上[]：let arr: number[] = [1, 2]
+  2.使用数组泛型：let arr: Array<number> = [1, 2]
+元组：用来表示已知元素数量和类型的数组，各元素类型不必相同，但是对应位置的类型需要相同。
+  let x: [string, number];
+  x = ['limeng', 1]; // 正确
+  x = [1, 'limeng']; // 报错
+枚举：用来定义数值集合
+  enum Color {Red, Yellow, Blue}
+  let c: Color = Color.Blue
+  console.log(c) // 2
+void：用来标识返回值的类型，表示该方法没有返回值
+  function hello(): void {
+    alert("hello word!")
+  }
+null：表示值缺失
+undefined：用来初始化变量为一个未定义的值
+never：是其他类型（包括null和undefined）的子类型,代表从不会出现的值。

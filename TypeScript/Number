@@ -1,0 +1,11 @@
+Number对象方法：
+  toExponential(): 把对象的值转换成指数计数法
+  toFixed(): 把数字转换成字符串，并对小数点指定位数。
+    var number = 123.567
+    console.log(number.toFixed(6)) // 123.567000
+  toPrecision(): 把数字格式化为指定长度
+    var number = 7.1223456
+    console.log(number.toPrecision(1)) // 7
+    console.log(number.toPrecision(3)) // 7.12
+  toString()：把数字转换成字符串，使用指定的基数，数字的基数是2~36之间的整数，若省略该参数，则使用基数10.
+  valueOf()：返回一个Number对象的原始值

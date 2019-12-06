@@ -1,0 +1,14 @@
+InnoDB
+MyISAM
+字符集
+索引
+数据库范式
+事务隔离级别
+幻读
+MVCC
+数据库锁
+
+书籍：
+  MySQL技术内幕———InnoDB存储引擎
+  高性能MySQL
+  高可用MySQL

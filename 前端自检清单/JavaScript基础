@@ -1,0 +1,28 @@
+变量与类型：
+  1.JavaScript规定了几种语言类型：
+      6中基本类型：string, number, boolean, null, undefined, symbol
+      引用类型：  object, array, function
+  2.JavaScript对象的底层数据结构是什么
+  3.Symbol类型在实际开发中的应用，手动实现一个简单的Symbol
+  4.JavaScript中变量在内存中的具体存储形式
+  5.基本类型对应的内置对象，以及他们之间的装箱拆箱操作
+  6.理解值类型和引用类型
+    值类型就是基本类型，保存在栈内存中，占据固定的空间
+    引用类型保存在堆内存中，占用空间不固定，栈内存中保存指向堆中保存的数组或者对象。
+        只有当一个变量没有任何引用变量引用它时，系统的垃圾回收机制才会在核实的时候回收它。
+        保存和复制的是一个对象的指针
+  7.null和undefined的区别
+    null是空值，表示没有值
+    undefined表示应该有值，但是没有赋值，undefined是会报错的
+  8.至少说出三种判断JavaScript数据类型的方式，以及它们的优缺点，如何准确地判断数组类型
+    typeof(): 不能有效的区分引用类型
+       typeof(['1'])  // Object
+    instanceof: 对于基本类型无法判断
+        '123' instanceof String // false
+    Object.prototype.toString.call()：通用的可以判断基本类型和引用类型，但是不能判断自定义类型
+    constructor: 在效果上和instanceof是一样的
+  9.可能发生隐式类型转换的场景以及转换原则，应如何避免或者巧妙应用
+  10.出现小数精度丢失的原因，JavaScript就可以存储的最大数字、最大安全数字，JavaScript处理大数字的
+      方法，避免精度丢失的方法
+    js最大整数：Math.Pow(2, 53)，当大于该数将可能会丢失精度。
+    避免精度丢失的方法：将小数先放位到整数，计算后，在缩小回原来的倍数。

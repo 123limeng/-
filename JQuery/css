@@ -1,0 +1,30 @@
+1.css(name|proterties|(name, value)|(name, fn))
+  访问匹配元素的样式属性
+    name：
+      String: 要访问的属性名称
+        比如：取得第一个段落的color样式属性的值
+        代码：$('p').css('color')
+      Array: 一个或多个css属性组成的数组
+    proterties: 要设置为样式属性的名/值对
+      比如：把所有段落的字体设置为红色背景设置成蓝色
+      代码：$('p').css({'color': '#ff0000'}, {'background': '#0000ff'})
+    name, value: 属性名，属性值
+      比如：把所有段落的字体设置为红色
+      代码：$('p').color('color', 'red')
+    name, function(index, value)：name是属性名，函数要返回要设置的属性值，接收两个参
+      数，index是元素在对象集合中的索引值，value是原先的属性值
+        比如：逐渐增加div的大小
+        代码：$('div').click(function() {
+          $(this).css({
+            width: function(index, value) {
+              return parseFloat(value) * 1.2
+            }
+          },
+          {
+            height: function(index, value) {
+              return parseFloat(value) * 1.2
+            }
+          }
+          )
+        })
+2.offset()
