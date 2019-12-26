@@ -1,0 +1,20 @@
+ready(fn): 当DOM载入就绪可以查询及操作时绑定一个要执行的函数。
+  参数fn: 要在Dom就绪是执行的函数
+  在DOM加载完成时要运行的代码：
+    $('document').ready(function() {
+      // 在这里可以写自己的代码，仍然可以使用$别名，而不用管全局$
+    })
+    上述写法也可以简写为：
+      $(function($) {
+        // 在这里可以写自己的代码，仍然可以使用$别名，而不用管全局$
+      })
+on(events, selector, data, fn)：当前选定的jquery对象中的元素上绑定一个或多个事件处理程序。
+  参数：
+    events：一个或多个用空格分隔的事件类型和可选的命名空间
+      $('p').on('click', function() {
+        alert($(this).text())
+      })
+    selector：一个选择器字符串用来过滤触发事件的选择器元素的后代
+    data：当事件被触发时要传递event.data给事件处理函数。
+    fn：该事件触发是执行的函数。false也可以作为一个函数的简写，返回false
+off(event, selector, data, fn)：当前选定的jquery对象中的元素，移除一个或者多个事件处理函数。
